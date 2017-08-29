@@ -1,0 +1,20 @@
+#Trying schemes without an ID inside the parenthesis will fail with output
+#(RIGHT_PAREN,”)”,4)
+Schemes:
+  snap()
+
+#comment
+
+  HasSameAddress(X,Y)
+
+
+Facts:
+  snap('12345','C. Brown','12 Apple','555-1234').
+
+Rules:
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+
+
+
+Queries:
+  HasSameAddress('Snoopy',Who)?

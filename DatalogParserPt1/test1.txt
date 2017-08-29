@@ -1,0 +1,2 @@
+#| This is testing to see if it excepts just a blank file.
+The output should be Failure! (EOF,””,2) |#

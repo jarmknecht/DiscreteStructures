@@ -1,0 +1,12 @@
+#Testing without Facts. Should fail and output (RULES,”Rules”, 8) since only
+#facts should come after schemes
+Schemes:
+  snap(S,N,A,P)
+
+  HasSameAddress(X,Y)
+
+Rules:
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+
+Queries:
+  HasSameAddress('Snoopy',Who)?

@@ -1,0 +1,12 @@
+#|Testing without queries. Output should be
+Failure! (EOF,””,12)
+|#
+
+Schemes:
+  snap(S,N,A,P)
+
+Facts:
+  snap('12345','C. Brown','12 Apple','555-1234').
+
+Rules:
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).

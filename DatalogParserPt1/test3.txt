@@ -1,0 +1,14 @@
+#|Testing to see if code can handle one of each type of scheme facts
+rules and query. Output will be success |#
+Schemes:
+    snap(S,N,A,P) 
+    NameHasID(N,S)
+ 
+Facts:
+    snap('12345','C. Brown','12 Apple','555-1234').
+ 
+Rules:
+    NameHasID(N,S) :- snap(S,N,A,P).
+ 
+Queries:
+    NameHasID('Snoopy',Id)?
